@@ -19,7 +19,7 @@ export const skills = [
     id: nanoid(),
     title: "Javascript",
     icon: <FaJs className="h-16 w-16 text-emerald-500" />,
-    text: "Expertise in JavaScript, building interactive and dynamic web applications with a focus on seamless user interactions and functionality",
+    text: "Expertise in JavaScript, building interactive and dynamic web applications with a focus on seamless user interactions and functionality.",
   },
   {
     id: nanoid(),
