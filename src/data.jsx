@@ -30,28 +30,28 @@ export const skills = [
 ];
 
 export const projects = [
-  {
+ {
     id: nanoid(),
     img: "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800",
-    url: "https://youtu.be/mjNx17nLfiI",
+    url: "https://menu-react-application.netlify.app/",
     github: "https://github.com/john-smilga",
     title: "first project",
-    text: "This is a video I edited about what I am interested in besides design and coding.",
+    text: "The Menu app, built with React, simplifies the display and management of menu items. Users can explore categorized menu items effortlessly, with features like dynamic rendering and category filtering enhancing the browsing experience.",
   },
   {
     id: nanoid(),
     img: "https://images.pexels.com/photos/2148222/pexels-photo-2148222.jpeg?auto=compress&cs=tinysrgb&w=800",
-    url: "https://www.youtube.com/shorts/GP9IZpCjg6k",
+    url: "https://accordion-app-react-new.netlify.app/",
     github: "https://github.com/john-smilga",
     title: "second project",
-    text: "This is a random photo I edited using IbisPaint X.",
+    text: "The Accordion project enables users to effortlessly navigate through a list of questions and answers using React. It offers interactive toggling functionality for each question, streamlining the exploration process.",
   },
   {
     id: nanoid(),
     img: "https://images.pexels.com/photos/12883026/pexels-photo-12883026.jpeg?auto=compress&cs=tinysrgb&w=800",
-    url: "https://www.youtube.com/shorts/RLvAedyCBOI",
+    url: "https://tours-projectreact.netlify.app",
     github: "https://github.com/john-smilga",
     title: "third project",
-    text: `This is a short and simple cartoon that I created.`,
+    text: `The Tours app, powered by React, simplifies tour management with features like fetching, viewing, and interacting with tour data, including a "read more" functionality, along with a "re-fetch" option for updated listings.`,
   },
 ];
