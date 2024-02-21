@@ -8,15 +8,12 @@ const About = () => {
         <article>
           <SectionTitle text="about me" />
           <p className="text-slate-600 mt-8 leading-loose">
-            I am a frontend developer with a passion for crafting exceptional
-            user experiences. My expertise lies in HTML, CSS, SCSS, JavaScript,
-            and React, where I combine design aesthetics with technical
-            proficiency to create engaging interfaces. Practicing a
-            comprehensive approach to web development, I seamlessly blend
-            frontend development with Agile principles, insights from IT
-            support, and cybersecurity. This allows me to prioritize user
-            experience while ensuring the reliability and security of web
-            applications.
+            I am a 12-year-old aspiring developer with a knack for creating cool
+            stuff on the web. I love playing around with video editing in
+            Shortcut, editing photos, and drawing cartoons with IbisPaint X.
+            I have also got the hang of making simple web pages using HTML and
+            CSS. I enjoy making things look good and work well, and I am always
+            excited to learn more about coding!
           </p>
         </article>
       </div>
