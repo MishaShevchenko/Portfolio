@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid";
-import { FaHtml5, FaYoutubeSquare, FaComments } from "react-icons/fa";
+import { FaHtml5, FaJs, FaReact } from "react-icons/fa";
 
 export const links = [
   { id: nanoid(), href: "#home", text: "home" },
@@ -17,7 +17,7 @@ export const skills = [
   },
   {
     id: nanoid(),
-    title: "YouTube",
+    title: "Javascript",
     icon: <FaYoutubeSquare className="h-16 w-16 text-emerald-500" />,
     text: "Experienced YouTube user, creating interactive and dynamic web applications with a focus on smooth user interactions and functionality.",
   },
