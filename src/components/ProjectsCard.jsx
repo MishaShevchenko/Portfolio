@@ -1,3 +1,4 @@
+import { FaGithubSquare } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
 
 // eslint-disable-next-line react/prop-types
@@ -15,6 +16,9 @@ const ProjectsCard = ({ url, img, title, text }) => {
         <div className="mt-4 flex gap-x-4">
           <a href={url}>
             <TbWorldWww className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
+          </a>
+           <a href="https://github.com/MishaShevchenko">
+            <FaGithubSquare className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
           </a>
         </div>
       </div>
