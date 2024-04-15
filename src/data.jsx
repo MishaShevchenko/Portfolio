@@ -49,9 +49,9 @@ export const projects = [
   {
     id: nanoid(),
     img: "https://images.pexels.com/photos/12883026/pexels-photo-12883026.jpeg?auto=compress&cs=tinysrgb&w=800",
-    url: "https://tours-projectreact.netlify.app",
+    url: "https://color-generator-react-mykhailo.netlify.app",
     github: "https://github.com/MishaShevchenko",
     title: "third project",
-    text: `The Tours app, powered by React, simplifies tour management with features like fetching, viewing, and interacting with tour data, including a "read more" functionality, along with a "re-fetch" option for updated listings.`,
+    text: `The "Color generator" app facilitates the creation and storage of color palettes, allowing users to generate custom colors and copy them to the clipboard. Additionally, it provides notifications for successful color additions or errors.`,
   },
 ];
