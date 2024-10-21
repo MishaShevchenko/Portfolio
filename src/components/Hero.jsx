@@ -21,6 +21,16 @@ const Hero = () => {
               <FaLinkedin className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
             </a>
           </div>
+          <div className="text-center my-10">
+            <a
+              href="https://www.canva.com/design/DAFbJkrBoKI/KMp0c46LGia90_pGftDsBg/edit?utm_content=DAFbJkrBoKI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors dark:bg-gray-200 dark:text-gray-900 dark:hover:bg-gray-300"
+            >
+              View My Resume
+            </a>
+          </div>
         </article>
         <article className="hidden md:block">
           <img src={heroImg} className="h-80 lg:h-96" />
