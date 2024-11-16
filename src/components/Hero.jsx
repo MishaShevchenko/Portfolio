@@ -1,5 +1,7 @@
-import heroImg from "../assets/hero.svg";
+// import heroImg from "../assets/hero.svg";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import graduationImg from "../assets/Graduation picture2.JPG";
+
 
 const Hero = () => {
   return (
@@ -33,7 +35,7 @@ const Hero = () => {
           </div>
         </article>
         <article className="hidden md:block">
-          <img src={heroImg} className="h-80 lg:h-96" />
+          <img src={graduationImg} className="h-80 lg:h-96" />
         </article>
       </div>
     </div>
