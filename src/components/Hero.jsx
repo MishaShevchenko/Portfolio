@@ -1,6 +1,7 @@
 // import heroImg from "../assets/hero.svg";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import graduationImg from "../assets/Graduation picture2.JPG";
+import { Typewriter } from "react-simple-typewriter";
 
 
 const Hero = () => {
@@ -9,8 +10,20 @@ const Hero = () => {
       <div className="align-element grid md:grid-cols-2 items-center gap-8">
         <article>
           <h1 className="text-7xl font-bold tracking-wider">{`I'm Mykhailo`}</h1>
-          <p className="mt-4 text-3xl text-slate-700 capitalize tracking-wide">
-            Full Stack Developer
+          <p className="mt-4 text-2xl text-slate-700 capitalize tracking-wide">
+            <Typewriter
+              words={[
+                "Full Stack Developer 💻",
+                "React Enthusiast ⚛️",
+                "Node.js Expert 🌐",
+              ]}
+              loop={Infinity}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
           </p>
           <p className="mt-2 text-lg text-slate-700 capitalize tracking-wide">
             turning ideas into interactive reality
