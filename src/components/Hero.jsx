@@ -1,6 +1,7 @@
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import graduationImg from "../assets/Graduation picture2.JPG";
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   return (
@@ -20,8 +21,24 @@ const Hero = () => {
         >
           <h1 className="text-7xl font-bold tracking-wider">{`I'm Mykhailo`}</h1>
           <p className="mt-4 text-2xl text-slate-700 capitalize tracking-wide">
-            {/* Static text fallback for mobile */}
+            {/* Typewriter effect for larger screens */}
             <span className="hidden sm:inline">
+              <Typewriter
+                words={[
+                  "Full Stack Developer 💻",
+                  "React Enthusiast ⚛️",
+                  "Node.js Expert 🌐",
+                ]}
+                loop={Infinity}
+                cursor
+                cursorStyle="|"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
+            </span>
+            {/* Static text fallback for mobile screens */}
+            <span className="sm:hidden">
               Full Stack Developer 💻, React Enthusiast ⚛️, Node.js Expert 🌐
             </span>
           </p>
