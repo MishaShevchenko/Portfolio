@@ -1,38 +1,44 @@
-// import heroImg from "../assets/hero.svg";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import graduationImg from "../assets/Graduation picture2.JPG";
-import { Typewriter } from "react-simple-typewriter";
-
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="bg-emerald-100 py-24">
+    <motion.div
+      className="bg-emerald-100 py-24"
+      id="hero"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="align-element grid md:grid-cols-2 items-center gap-8">
-        <article>
+        {/* Left Section - Text */}
+        <motion.article
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
           <h1 className="text-7xl font-bold tracking-wider">{`I'm Mykhailo`}</h1>
           <p className="mt-4 text-2xl text-slate-700 capitalize tracking-wide">
-            <Typewriter
-              words={[
-                "Full Stack Developer 💻",
-                "React Enthusiast ⚛️",
-                "Node.js Expert 🌐",
-              ]}
-              loop={Infinity}
-              cursor
-              cursorStyle="|"
-              typeSpeed={70}
-              deleteSpeed={50}
-              delaySpeed={1000}
-            />
+            {/* Static text fallback for mobile */}
+            <span className="hidden sm:inline">
+              Full Stack Developer 💻, React Enthusiast ⚛️, Node.js Expert 🌐
+            </span>
           </p>
           <p className="mt-2 text-lg text-slate-700 capitalize tracking-wide">
-            turning ideas into interactive reality
+            Turning ideas into interactive reality
           </p>
           <div className="flex gap-x-4 mt-4">
-            <a href="https://github.com/MishaShevchenko">
+            <a
+              href="https://github.com/MishaShevchenko"
+              aria-label="GitHub Profile"
+            >
               <FaGithubSquare className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
             </a>
-            <a href="https://www.linkedin.com/in/misha-shevchenko/">
+            <a
+              href="https://www.linkedin.com/in/misha-shevchenko/"
+              aria-label="LinkedIn Profile"
+            >
               <FaLinkedin className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
             </a>
           </div>
@@ -46,12 +52,24 @@ const Hero = () => {
               View My Resume
             </a>
           </div>
-        </article>
-        <article className="hidden md:block">
-          <img src={graduationImg} className="h-80 lg:h-96" />
-        </article>
+        </motion.article>
+
+        {/* Right Section - Image */}
+        <motion.article
+          className="hidden md:block"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.2 }}
+        >
+          <img
+            src={graduationImg}
+            alt="Graduation"
+            className="h-80 lg:h-96 object-cover rounded-lg shadow-lg"
+          />
+        </motion.article>
       </div>
-    </div>
+    </motion.div>
   );
 };
+
 export default Hero;
