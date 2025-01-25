@@ -7,7 +7,8 @@ const textVariants = {
   visible: (i) => ({
     opacity: 1,
     transition: {
-      delay: i * 0.3, // Staggered effect
+      delay: i * 0.2, // Stagger effect
+      duration: 0.8, // Smooth fade-in
     },
   }),
 };
@@ -26,7 +27,7 @@ const About = () => {
       id="about"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ amount: 0.5, once: false }} // Trigger when 50% is visible
+      viewport={{ amount: 0.5, once: false }}
       transition={{ duration: 0.8 }}
     >
       <div className="align-element grid md:grid-cols-2 items-center gap-16">
@@ -35,36 +36,30 @@ const About = () => {
           src={aboutSvg}
           alt="About illustration"
           className="w-full h-64"
-          initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ opacity: 0 }} // Fade-in without layout shifts
+          whileInView={{ opacity: 1 }}
           viewport={{ amount: 0.5, once: false }}
           transition={{ duration: 1 }}
         />
 
         {/* Text Section */}
         <motion.article
-          initial={{ x: 100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ amount: 0.5, once: false }}
-          transition={{ duration: 1 }}
+          className="text-slate-600 mt-8 leading-loose space-y-4"
         >
           <SectionTitle text="about me" />
-          <div className="text-slate-600 mt-8 leading-loose">
-            {/* Staggered Text Animation */}
-            {lines.map((line, i) => (
-              <motion.p
-                key={i}
-                custom={i}
-                variants={textVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ amount: 0.5 }}
-                className="text-lg md:text-xl"
-              >
-                {line}
-              </motion.p>
-            ))}
-          </div>
+          {lines.map((line, i) => (
+            <motion.p
+              key={i}
+              variants={textVariants}
+              custom={i}
+              className="text-lg md:text-xl"
+            >
+              {line}
+            </motion.p>
+          ))}
         </motion.article>
       </div>
     </motion.section>
