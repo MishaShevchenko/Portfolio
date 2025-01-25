@@ -1,16 +1,32 @@
 import aboutSvg from "../assets/about.svg";
 import SectionTitle from "./SectionTitle";
-import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 
+const textVariants = {
+  hidden: { opacity: 0 },
+  visible: (i) => ({
+    opacity: 1,
+    transition: {
+      delay: i * 0.3, // Staggered effect
+    },
+  }),
+};
+
 const About = () => {
+  const lines = [
+    "I am a full-stack developer with a passion for crafting exceptional user experiences.",
+    "My expertise spans HTML, CSS, SCSS, JavaScript, React, Node.js, and MySQL.",
+    "I combine design aesthetics with technical proficiency to create engaging and robust interfaces.",
+    "With insights from IT support and cybersecurity, I ensure the reliability and scalability of web applications.",
+  ];
+
   return (
     <motion.section
       className="bg-white py-20"
       id="about"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ amount: 0.5 }} // Trigger when 50% is visible
+      viewport={{ amount: 0.5, once: false }} // Trigger when 50% is visible
       transition={{ duration: 0.8 }}
     >
       <div className="align-element grid md:grid-cols-2 items-center gap-16">
@@ -19,46 +35,35 @@ const About = () => {
           src={aboutSvg}
           alt="About illustration"
           className="w-full h-64"
-          initial={{ x: -100, opacity: 0 }} // Start off-screen to the left
-          whileInView={{ x: 0, opacity: 1 }} // Move to center
-          viewport={{ amount: 0.5, once: false }} // Re-trigger on scroll up
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ amount: 0.5, once: false }}
           transition={{ duration: 1 }}
         />
 
         {/* Text Section */}
         <motion.article
-          initial={{ x: 100, opacity: 0 }} // Start off-screen to the right
-          whileInView={{ x: 0, opacity: 1 }} // Move to center
-          viewport={{ amount: 0.5, once: false }} // Re-trigger on scroll up
-          transition={{ duration: 1, delay: 0.2 }}
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ amount: 0.5, once: false }}
+          transition={{ duration: 1 }}
         >
           <SectionTitle text="about me" />
           <div className="text-slate-600 mt-8 leading-loose">
-            {/* Add fallback text and responsive design */}
-            <p className="text-lg md:text-xl">
-              <span className="hidden sm:inline">
-                {/* Fallback for non-Typewriter users */}I am a full-stack
-                developer, specializing in creating exceptional user
-                experiences.
-              </span>
-              <span className="block sm:hidden">
-                {/* Typewriter effect for larger screens */}
-                <Typewriter
-                  words={[
-                    "I am a full-stack developer with a passion for crafting exceptional user experiences.",
-                    "My expertise spans HTML, CSS, SCSS, JavaScript, React, Node.js, and MySQL.",
-                    "I combine design aesthetics with technical proficiency to create engaging and robust interfaces.",
-                    "With insights from IT support and cybersecurity, I ensure the reliability and scalability of web applications.",
-                  ]}
-                  loop={Infinity}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={100} // Slower typing for clarity
-                  deleteSpeed={70}
-                  delaySpeed={2000} // Pause longer between words
-                />
-              </span>
-            </p>
+            {/* Staggered Text Animation */}
+            {lines.map((line, i) => (
+              <motion.p
+                key={i}
+                custom={i}
+                variants={textVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ amount: 0.5 }}
+                className="text-lg md:text-xl"
+              >
+                {line}
+              </motion.p>
+            ))}
           </div>
         </motion.article>
       </div>
