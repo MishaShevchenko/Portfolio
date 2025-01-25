@@ -34,21 +34,30 @@ const About = () => {
         >
           <SectionTitle text="about me" />
           <div className="text-slate-600 mt-8 leading-loose">
-            <p className="text-xl">
-              <Typewriter
-                words={[
-                  "I am a full-stack developer with a passion for crafting exceptional user experiences.",
-                  "My expertise spans HTML, CSS, SCSS, JavaScript, React, Node.js, and MySQL.",
-                  "I combine design aesthetics with technical proficiency to create engaging and robust interfaces.",
-                  "With insights from IT support and cybersecurity, I ensure the reliability and scalability of web applications.",
-                ]}
-                loop={Infinity}
-                cursor
-                cursorStyle="|"
-                typeSpeed={70}
-                deleteSpeed={50}
-                delaySpeed={1000}
-              />
+            {/* Add fallback text and responsive design */}
+            <p className="text-lg md:text-xl">
+              <span className="hidden sm:inline">
+                {/* Fallback for non-Typewriter users */}I am a full-stack
+                developer, specializing in creating exceptional user
+                experiences.
+              </span>
+              <span className="block sm:hidden">
+                {/* Typewriter effect for larger screens */}
+                <Typewriter
+                  words={[
+                    "I am a full-stack developer with a passion for crafting exceptional user experiences.",
+                    "My expertise spans HTML, CSS, SCSS, JavaScript, React, Node.js, and MySQL.",
+                    "I combine design aesthetics with technical proficiency to create engaging and robust interfaces.",
+                    "With insights from IT support and cybersecurity, I ensure the reliability and scalability of web applications.",
+                  ]}
+                  loop={Infinity}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={100} // Slower typing for clarity
+                  deleteSpeed={70}
+                  delaySpeed={2000} // Pause longer between words
+                />
+              </span>
             </p>
           </div>
         </motion.article>
