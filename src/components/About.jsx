@@ -18,24 +18,32 @@ const About = () => {
           src={aboutSvg}
           alt="About illustration"
           className="w-full h-64"
-          initial={{ x: -100, opacity: 0 }} // Slide from left on large screens
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ amount: 0.5, once: false }}
-          transition={{ duration: 1 }}
-          style={{
-            transform: "none", // Reset for mobile
+          initial={{
+            x: 0, // No sliding for mobile
+            opacity: 0,
+          }}
+          whileInView={{
+            x: 0, // Keep content static for mobile
             opacity: 1,
           }}
+          viewport={{
+            amount: 0.5,
+            once: false,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          className="sm:hidden md:block" // Only apply advanced animations for larger screens
         />
 
         {/* Text Section */}
         <motion.article
           initial={{
-            x: 100,
+            x: 0, // No sliding for mobile
             opacity: 0,
-          }} // Slide from right on large screens
+          }}
           whileInView={{
-            x: 0,
+            x: 0, // Keep content static for mobile
             opacity: 1,
           }}
           viewport={{
@@ -54,7 +62,9 @@ const About = () => {
               key={i}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ amount: 0.5 }}
+              viewport={{
+                amount: 0.5,
+              }}
               transition={{
                 delay: i * 0.2,
                 duration: 0.8,
