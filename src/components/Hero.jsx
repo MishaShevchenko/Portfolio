@@ -19,7 +19,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-7xl font-bold tracking-wider">{`I'm Mykhailo`}</h1>
+          <h1 className="text-6xl font-bold tracking-wider">{`I'm Mykhailo`}</h1>
           <p className="mt-4 text-2xl text-slate-700 capitalize tracking-wide">
             {/* Typewriter effect for larger screens */}
             <span className="hidden sm:inline">

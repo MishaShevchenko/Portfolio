@@ -19,11 +19,11 @@ const About = () => {
           alt="About illustration"
           className="w-full h-64"
           initial={{
-            x: 0, // No sliding for mobile
+            x: window.innerWidth >= 768 ? -100 : 0, // Slide only on larger screens
             opacity: 0,
           }}
           whileInView={{
-            x: 0, // Keep content static for mobile
+            x: 0,
             opacity: 1,
           }}
           viewport={{
@@ -33,17 +33,16 @@ const About = () => {
           transition={{
             duration: 1,
           }}
-          className="sm:hidden md:block" // Only apply advanced animations for larger screens
         />
 
         {/* Text Section */}
         <motion.article
           initial={{
-            x: 0, // No sliding for mobile
+            x: window.innerWidth >= 768 ? 100 : 0, // Slide only on larger screens
             opacity: 0,
           }}
           whileInView={{
-            x: 0, // Keep content static for mobile
+            x: 0,
             opacity: 1,
           }}
           viewport={{
