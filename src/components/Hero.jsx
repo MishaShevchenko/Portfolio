@@ -15,8 +15,8 @@ const Hero = () => {
       <div className="align-element grid md:grid-cols-2 items-center gap-8">
         {/* Left Section - Text */}
         <motion.article
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0 }} // No sliding, only fading in
+          animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
           <h1 className="text-7xl font-bold tracking-wider">{`I'm Mykhailo`}</h1>
@@ -74,8 +74,8 @@ const Hero = () => {
         {/* Right Section - Image */}
         <motion.article
           className="hidden md:block"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
           <img

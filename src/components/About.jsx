@@ -18,18 +18,34 @@ const About = () => {
           src={aboutSvg}
           alt="About illustration"
           className="w-full h-64"
-          initial={{ x: -100, opacity: 0 }} // Start off-screen to the left
-          whileInView={{ x: 0, opacity: 1 }} // Slide to center when in view
-          viewport={{ amount: 0.5, once: false }} // Trigger based on scroll
+          initial={{ x: -100, opacity: 0 }} // Slide from left on large screens
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ amount: 0.5, once: false }}
           transition={{ duration: 1 }}
+          style={{
+            transform: "none", // Reset for mobile
+            opacity: 1,
+          }}
         />
 
         {/* Text Section */}
         <motion.article
-          initial={{ x: 100, opacity: 0 }} // Start off-screen to the right
-          whileInView={{ x: 0, opacity: 1 }} // Slide to center when in view
-          viewport={{ amount: 0.5, once: false }}
-          transition={{ duration: 1, delay: 0.2 }}
+          initial={{
+            x: 100,
+            opacity: 0,
+          }} // Slide from right on large screens
+          whileInView={{
+            x: 0,
+            opacity: 1,
+          }}
+          viewport={{
+            amount: 0.5,
+            once: false,
+          }}
+          transition={{
+            duration: 1,
+            delay: 0.2,
+          }}
           className="text-slate-600 mt-8 leading-loose space-y-4"
         >
           <SectionTitle text="about me" />
@@ -38,8 +54,11 @@ const About = () => {
               key={i}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ amount: 0.5, once: false }}
-              transition={{ delay: i * 0.2, duration: 0.8 }}
+              viewport={{ amount: 0.5 }}
+              transition={{
+                delay: i * 0.2,
+                duration: 0.8,
+              }}
               className="text-lg md:text-xl"
             >
               {line}
