@@ -35,7 +35,7 @@ export const projects = [
     img: "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800",
     url: "https://contentful-cms-mike.netlify.app/",
     github: "https://github.com/MishaShevchenko",
-    title: "first project",
+    title: "Explore the E-commerce Demo",
     text: "Each project reflects my continuous growth in both front-end and back-end development. I've gained experience in responsive design, working with APIs, and implementing dynamic content. To see more details and explore live demos of these projects, check the links below.",
   },
   {
@@ -43,7 +43,7 @@ export const projects = [
     img: "https://images.pexels.com/photos/2148222/pexels-photo-2148222.jpeg?auto=compress&cs=tinysrgb&w=800",
     url: "https://contentful-cms-mike.netlify.app/",
     github: "https://github.com/MishaShevchenko",
-    title: "second project",
+    title: "Try the To-Do App Live",
     text: "These projects represent different stages of my journey in web development, highlighting various levels of complexity and technical skill. From integrating third-party APIs to creating responsive, user-friendly designs, each project has taught me valuable lessons. For more information and live demonstrations, follow the links below.",
   },
   {
@@ -51,7 +51,7 @@ export const projects = [
     img: "https://images.pexels.com/photos/12883026/pexels-photo-12883026.jpeg?auto=compress&cs=tinysrgb&w=800",
     url: "https://contentful-cms-mike.netlify.app/",
     github: "https://github.com/MishaShevchenko",
-    title: "third project",
+    title: "Read the Blog App Codebase",
     text: `Through these projects, I have developed a solid foundation in both front-end and back-end technologies, exploring areas like API integration, dynamic data handling, and modern web development practices. To see the projects in action and learn more, please visit the links below.`,
   },
 ];

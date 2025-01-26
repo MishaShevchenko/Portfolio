@@ -7,7 +7,6 @@ const ProjectsCard = ({ url, img, title, text, github }) => {
     <article className="bg-white rounded-lg shadow-md hover:shadow-2xl duration-300 transform hover:scale-105 overflow-hidden">
       <div className="relative">
         <img src={img} alt={title} className="w-full object-cover h-64" />
-        {/* Оверлей с названием */}
         <div className="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 duration-300 flex items-center justify-center">
           {/* <h3 className="text-white text-lg font-semibold">{title}</h3> */}
         </div>
