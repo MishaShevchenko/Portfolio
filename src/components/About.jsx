@@ -8,7 +8,10 @@ const About = () => {
   ];
 
   return (
-    <section className="bg-white py-20 overflow-hidden" id="about">
+    <section
+      className="bg-white dark:bg-gray-900 py-20 overflow-hidden transition-colors duration-300"
+      id="about"
+    >
       <div className="align-element grid md:grid-cols-2 items-center gap-16">
         {/* Image Section */}
         <motion.img
@@ -27,7 +30,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ amount: 0.5, once: false }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="text-slate-600 mt-8 leading-loose space-y-4"
+          className="text-slate-600 dark:text-slate-300 mt-8 leading-loose space-y-4"
         >
           <SectionTitle text="about me" />
           {lines.map((line, i) => (

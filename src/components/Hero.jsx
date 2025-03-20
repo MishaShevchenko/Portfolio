@@ -1,12 +1,12 @@
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
-import graduationImg from "../assets/Graduation picture2.JPG";
-import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
+import graduationImg from "../assets/Graduation picture2.JPG";
 
 const Hero = () => {
   return (
     <motion.div
-      className="bg-emerald-100 py-24"
+      className="bg-emerald-100 dark:bg-gray-900 py-24 relative"
       id="hero"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -15,20 +15,16 @@ const Hero = () => {
       <div className="align-element grid md:grid-cols-2 items-center gap-8">
         {/* Left Section - Text */}
         <motion.article
-          initial={{ opacity: 0 }} // No sliding, only fading in
+          initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-6xl font-bold tracking-wider">{`I'm Mykhailo`}</h1>
-          <p className="mt-4 text-2xl text-slate-700 capitalize tracking-wide">
-            {/* Typewriter effect for larger screens */}
+          <h1 className="text-6xl font-bold tracking-wider dark:text-white">{`I'm Mykhailo`}</h1>
+          <p className="mt-4 text-2xl text-slate-700 dark:text-slate-300 capitalize tracking-wide">
+            {/* Typewriter effect */}
             <span className="hidden sm:inline">
               <Typewriter
-                words={[
-                  "Full Stack Developer 💻",
-                  "React Enthusiast ⚛️",
-                  "Node.js Expert 🌐",
-                ]}
+                words={["Full Stack Developer 💻", "React Enthusiast ⚛️", "Node.js Expert 🌐"]}
                 loop={Infinity}
                 cursor
                 cursorStyle="|"
@@ -37,26 +33,17 @@ const Hero = () => {
                 delaySpeed={1000}
               />
             </span>
-            {/* Static text fallback for mobile screens */}
-            <span className="sm:hidden">
-              Full Stack Developer 💻, React Enthusiast ⚛️, Node.js Expert 🌐
-            </span>
+            <span className="sm:hidden">Full Stack Developer 💻, React Enthusiast ⚛️, Node.js Expert 🌐</span>
           </p>
-          <p className="mt-2 text-lg text-slate-700 capitalize tracking-wide">
+          <p className="mt-2 text-lg text-slate-700 dark:text-slate-300 capitalize tracking-wide">
             Turning ideas into interactive reality
           </p>
           <div className="flex gap-x-4 mt-4">
-            <a
-              href="https://github.com/MishaShevchenko"
-              aria-label="GitHub Profile"
-            >
-              <FaGithubSquare className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
+            <a href="https://github.com/MishaShevchenko" aria-label="GitHub Profile">
+              <FaGithubSquare className="h-8 w-8 text-slate-500 dark:text-white hover:text-black dark:hover:text-gray-300 duration-300" />
             </a>
-            <a
-              href="https://www.linkedin.com/in/misha-shevchenko/"
-              aria-label="LinkedIn Profile"
-            >
-              <FaLinkedin className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
+            <a href="https://www.linkedin.com/in/misha-shevchenko/" aria-label="LinkedIn Profile">
+              <FaLinkedin className="h-8 w-8 text-slate-500 dark:text-white hover:text-black dark:hover:text-gray-300 duration-300" />
             </a>
           </div>
           <div className="text-center my-10">
