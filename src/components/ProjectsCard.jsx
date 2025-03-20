@@ -1,42 +1,41 @@
-import { FaGithubSquare } from "react-icons/fa";
-import { TbWorldWww } from "react-icons/tb";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
-// eslint-disable-next-line react/prop-types
-const ProjectsCard = ({ url, img, title, text, github }) => {
+const ProjectCard = ({ img, url, github, title, text }) => {
   return (
-    <article className="bg-white rounded-lg shadow-md hover:shadow-2xl duration-300 transform hover:scale-105 overflow-hidden">
-      <div className="relative">
-        <img src={img} alt={title} className="w-full object-cover h-64" />
-        <div className="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 duration-300 flex items-center justify-center">
-          {/* <h3 className="text-white text-lg font-semibold">{title}</h3> */}
-        </div>
+    <div className="bg-gray-900 text-white rounded-2xl shadow-lg p-6 flex flex-col gap-4 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-800">
+      {/* Проектное изображение */}
+      <img src={img} alt={title} className="rounded-xl w-full h-48 object-cover" />
+
+      {/* Название проекта */}
+      <h3 className="text-xl font-bold text-emerald-400">{title}</h3>
+
+      {/* Описание проекта */}
+      <p className="text-gray-300">{text}</p>
+
+      {/* Кнопки GitHub & Live Demo */}
+      <div className="flex gap-4 mt-4">
+        <a
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition"
+        >
+          <FaGithub className="text-xl" />
+          GitHub
+        </a>
+
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-white px-4 py-2 rounded-lg transition"
+        >
+          <FaExternalLinkAlt className="text-xl" />
+          Live Demo
+        </a>
       </div>
-      <div className="p-6">
-        <h2 className="text-2xl tracking-wide font-semibold text-slate-800">
-          {title}
-        </h2>
-        <p className="mt-4 text-slate-600 leading-relaxed">{text}</p>
-        <div className="mt-6 flex gap-x-4">
-          <a
-            href={url}
-            className="p-2 bg-slate-100 rounded-full hover:bg-slate-200 text-slate-700 duration-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <TbWorldWww className="h-6 w-6" />
-          </a>
-          <a
-            href={github}
-            className="p-2 bg-slate-100 rounded-full hover:bg-slate-200 text-slate-700 duration-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithubSquare className="h-6 w-6" />
-          </a>
-        </div>
-      </div>
-    </article>
+    </div>
   );
 };
 
-export default ProjectsCard;
+export default ProjectCard;

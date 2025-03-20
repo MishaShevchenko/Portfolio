@@ -1,48 +1,40 @@
 import { motion } from "framer-motion";
 import { skills } from "../data";
-import SectionTitle from "./SectionTitle";
-import SkillsCard from "./SkillsCard";
 
 const Skills = () => {
   return (
     <motion.section
-      className="py-20 align-element"
+      className="py-20 align-element overflow-hidden"
       id="skills"
-      initial={{ opacity: 0 }} // Start empty
-      whileInView={{ opacity: 1 }} // Become visible when in viewport
-      viewport={{ amount: 0.5, once: false }} // Re-trigger on scroll up
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ amount: 0.5, once: false }}
       transition={{ duration: 0.8 }}
     >
-      {/* Section Title */}
-      <SectionTitle text="tech stack" />
+      <h2 className="text-center text-3xl font-bold mb-8 text-gray-800">
+        My Tech Stack
+      </h2>
 
-      {/* Skills Grid */}
-      <motion.div
-        className="py-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.5, once: false }} // Trigger when 50% is visible
-        variants={{
-          hidden: {}, // Default state for children
-          visible: {
-            transition: {
-              staggerChildren: 0.2, // Stagger animation between cards
-            },
-          },
-        }}
-      >
-        {skills.map((skill) => (
-          <motion.div
-            key={skill.id}
-            initial={{ opacity: 0, scale: 0.7 }} // Start hidden and smaller
-            whileInView={{ opacity: 1, scale: 1 }} // Animate to full size and visible
-            viewport={{ amount: 0.5, once: false }} // Re-trigger
-            transition={{ duration: 1 }}
-          >
-            <SkillsCard {...skill} />
-          </motion.div>
-        ))}
-      </motion.div>
+      <div className="relative w-full overflow-hidden">
+        <motion.div
+          className="flex space-x-14 text-6xl" // Увеличил размер иконок
+          animate={{ x: ["0%", "-100%"] }}
+          transition={{ repeat: Infinity, duration: 60, ease: "linear" }} // Сделал прокрутку медленнее
+          style={{ display: "flex", minWidth: "200%" }}
+        >
+          {[...skills, ...skills].map((skill, index) => (
+            <motion.div
+              key={index}
+              className="flex flex-col items-center justify-center w-32 h-32" // Увеличил размер контейнера
+              whileHover={{ scale: 1.2, rotate: 5 }} // Добавил эффект анимации при наведении
+              transition={{ type: "spring", stiffness: 200 }}
+            >
+              {skill.icon}
+              <p className="text-sm mt-2">{skill.name}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </motion.section>
   );
 };
