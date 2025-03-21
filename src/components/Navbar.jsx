@@ -21,7 +21,6 @@ const Navbar = ({ theme, toggleTheme }) => {
           ))}
         </div>
 
-        {/* ОДНА кнопка для темы */}
         <button
           onClick={toggleTheme}
           className="p-2 bg-gray-300 dark:bg-gray-700 text-black dark:text-white rounded-full shadow-md hover:scale-110 transition-transform duration-300"

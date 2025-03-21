@@ -3,7 +3,7 @@ import { FaCheckCircle } from "react-icons/fa";
 
 const ServicesSection = ({ theme }) => {
   return (
-    <section className={`py-12 transition-colors duration-300 ${theme === "dark" ? "bg-gray-900 text-white" : "bg-emerald-100 text-black"}`}>
+    <section id = "services" className={`py-12 transition-colors duration-300 ${theme === "dark" ? "bg-gray-900 text-white" : "bg-emerald-100 text-black"}`}>
       <div className="container mx-auto px-6">
         <h2 className={`text-3xl font-bold text-center mb-8 ${theme === "dark" ? "text-emerald-400" : "text-emerald-600"}`}>My Services</h2>
         <div className="grid md:grid-cols-3 gap-8">
