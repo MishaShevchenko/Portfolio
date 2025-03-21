@@ -1,7 +1,7 @@
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
-import graduationImg from "../assets/Graduation picture2.jpg";
+import graduationImg from "../assets/Graduation_picture2.jpg";
 
 const Hero = () => {
   return (
@@ -78,7 +78,7 @@ const Hero = () => {
   animate={{ opacity: 1, scale: 1 }}
   transition={{ duration: 0.8 }}
 />
-``
+
 
 
         </motion.article>
