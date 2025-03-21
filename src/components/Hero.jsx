@@ -19,7 +19,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-6xl font-bold tracking-wider dark:text-white">{`I'm Mykhailo`}</h1>
+          <h1 className="text-5xl font-bold tracking-wider dark:text-white">{`I'm Mykhailo`}</h1>
           <p className="mt-4 text-2xl text-slate-700 dark:text-slate-300 capitalize tracking-wide">
             {/* Typewriter effect */}
             <span className="hidden sm:inline">
@@ -65,11 +65,22 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          <img
-            src={graduationImg}
-            alt="Graduation"
-            className="h-80 lg:h-96 object-cover rounded-lg shadow-lg"
-          />
+<motion.img
+  src={graduationImg}
+  alt="Graduation"
+  className="w-full max-w-[320px] sm:max-w-[380px] md:max-w-[420px] lg:max-w-[460px] xl:max-w-[500px] 
+             h-auto object-cover rounded-lg shadow-md 
+             border border-gray-300 dark:border-gray-600 
+             mt-[-50px] sm:mt-[-60px] md:mt-[-70px] lg:mt-[-75px] 
+             ml-[60px] sm:ml-[80px] md:ml-[100px] lg:ml-[120px]
+             transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+  initial={{ opacity: 0, scale: 0.95 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.8 }}
+/>
+
+
+
         </motion.article>
       </div>
     </motion.div>

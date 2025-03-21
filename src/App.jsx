@@ -28,9 +28,9 @@ const App = () => {
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <Hero theme={theme} toggleTheme={toggleTheme} />
       <Skills />
-      <ServicesSection />
+      <ServicesSection theme={theme}  toggleTheme={toggleTheme} />
       <About />
-      <Projects />
+      <Projects theme={theme}  toggleTheme={toggleTheme}/>
       <Footer />
     </div>
   );
