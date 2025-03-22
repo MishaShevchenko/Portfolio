@@ -9,7 +9,7 @@ const Navbar = ({ theme, toggleTheme }) => {
           Web <span className="text-emerald-600 dark:text-emerald-400">Dev</span>
         </h2>
         
-        <div className="flex gap-x-3">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-x-5">
           {links.map((link) => (
             <a
               key={link.id}

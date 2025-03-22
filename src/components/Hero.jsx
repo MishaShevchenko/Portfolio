@@ -68,16 +68,14 @@ const Hero = () => {
 <motion.img
   src={graduationImg}
   alt="Graduation"
-  className="w-full max-w-[320px] sm:max-w-[380px] md:max-w-[420px] lg:max-w-[460px] xl:max-w-[500px] 
-             h-auto object-cover rounded-lg shadow-md 
-             border border-gray-300 dark:border-gray-600 
-             mt-[-50px] sm:mt-[-60px] md:mt-[-70px] lg:mt-[-75px] 
-             ml-[60px] sm:ml-[80px] md:ml-[100px] lg:ml-[120px]
-             transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+  className="w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[450px] mx-auto object-cover border-2 border-gray-500 rounded-lg"
   initial={{ opacity: 0, scale: 0.95 }}
   animate={{ opacity: 1, scale: 1 }}
   transition={{ duration: 0.8 }}
 />
+
+
+
 
 
 
