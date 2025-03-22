@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { skills } from "../data";
+import SectionTitle from "./SectionTitle";
 
 const Skills = () => {
   return (
@@ -11,9 +12,10 @@ const Skills = () => {
       viewport={{ amount: 0.5, once: false }}
       transition={{ duration: 0.8 }}
     >
-      <h2 className="text-center text-3xl font-bold mb-8 text-gray-800">
+      <SectionTitle text = "My Tech Stack"/>
+      {/* <h2 className="text-center text-3xl font-bold mb-8 text-gray-800">
         My Tech Stack
-      </h2>
+      </h2> */}
 
       <div className="relative w-full overflow-hidden">
         <motion.div

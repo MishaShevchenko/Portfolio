@@ -10,7 +10,7 @@ const About = () => {
   return (
     <section
       className="bg-white dark:bg-gray-900 py-20 overflow-hidden transition-colors duration-300"
-      id="about"
+      id="aboфut"
     >
       <div className="align-element grid md:grid-cols-2 items-center gap-16">
         {/* Image Section */}
