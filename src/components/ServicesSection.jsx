@@ -16,13 +16,13 @@ const ServicesSection = ({ theme }) => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl ${
-                theme === "dark" ? "bg-gray-800" : "bg-white"
+              className={`p-6 rounded-xl shadow-md border transition-transform transform hover:scale-[1.02] hover:shadow-lg ${
+                theme === "dark" ? "bg-gray-800 border-gray-700" : "bg-white border-gray-300"
               }`}
             >
               <h3
                 className={`text-xl font-semibold mb-4 ${
-                  theme === "dark" ? "text-emerald-300" : "text-emerald-700"
+                  theme === "dark" ? "text-gray-200" : "text-gray-800"
                 }`}
               >
                 {service.title}
@@ -32,12 +32,12 @@ const ServicesSection = ({ theme }) => {
                   <li key={idx} className="flex items-start gap-3">
                     <FaCheckCircle
                       className={`mt-[2px] w-5 h-5 flex-shrink-0 ${
-                        theme === "dark" ? "text-emerald-400" : "text-emerald-600"
+                        theme === "dark" ? "text-emerald-300" : "text-emerald-500"
                       }`}
                     />
                     <span
                       className={`leading-relaxed ${
-                        theme === "dark" ? "text-gray-300" : "text-gray-700"
+                        theme === "dark" ? "text-gray-400" : "text-gray-600"
                       }`}
                     >
                       {item}
