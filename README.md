@@ -1,8 +1,57 @@
-# React + Vite
+# Mykhailo Shevchenko — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website showcasing my work, experience, and skills as a Full-Stack Developer.
 
-Currently, two official plugins are available:
+**Live site:** [mykhailo-shevchenko.netlify.app](https://mykhailo-shevchenko.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+
+- **Framework:** React 18 + Vite
+- **Styling:** Tailwind CSS (dark mode support)
+- **Animation:** Framer Motion
+- **Icons:** React Icons
+- **Typewriter effect:** react-simple-typewriter
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+npm run preview
+```
+
+## Project Structure
+
+```
+src/
+├── components/       # All UI components
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── Skills.jsx
+│   ├── About.jsx
+│   ├── Experience.jsx
+│   ├── ServicesSection.jsx
+│   ├── Projects.jsx
+│   ├── ProjectsCard.jsx
+│   ├── Contact.jsx
+│   ├── Footer.jsx
+│   └── SectionTitle.jsx
+├── assets/           # Images and SVGs
+├── data.jsx          # All content data (nav, skills, projects, experience)
+├── App.jsx           # Root layout
+└── index.css         # Global styles + Tailwind layers
+public/
+└── resume.pdf        # CV download
+```
+
+## Contact
+
+- **Email:** msheva.dev@gmail.com
+- **LinkedIn:** [misha-shevchenko](https://www.linkedin.com/in/misha-shevchenko/)
+- **GitHub:** [MishaShevchenko](https://github.com/MishaShevchenko)
