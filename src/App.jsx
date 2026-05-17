@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import About from "./components/About";
+import Contact from "./components/Contact";
+import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -26,11 +28,13 @@ const App = () => {
   return (
     <div className="bg-emerald-100 dark:bg-gray-900 text-black dark:text-white transition-colors duration-300">
       <Navbar theme={theme} toggleTheme={toggleTheme} />
-      <Hero theme={theme} toggleTheme={toggleTheme} />
+      <Hero />
       <Skills />
-      <ServicesSection theme={theme}  toggleTheme={toggleTheme} />
       <About />
-      <Projects theme={theme}  toggleTheme={toggleTheme}/>
+      <Experience />
+      <ServicesSection theme={theme} />
+      <Projects theme={theme} />
+      <Contact />
       <Footer />
     </div>
   );
