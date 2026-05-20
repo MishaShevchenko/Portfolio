@@ -39,7 +39,8 @@ const Contact = () => {
           className="mt-4 text-center text-lg text-slate-600 dark:text-slate-300 max-w-xl mx-auto"
         >
           I'm open to full-time roles, freelance projects, and interesting
-          collaborations. Feel free to reach out — I typically reply within a
+          collaborations. I enjoy translating business requirements into clean,
+          working software. Feel free to reach out. I typically reply within a
           day.
         </motion.p>
 

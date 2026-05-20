@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mykhailo-shevchenko.netlify.app/sitemap.xml

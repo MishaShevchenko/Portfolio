@@ -53,22 +53,13 @@ export const projects = [
     text: "Full-featured store with product filtering, sorting, pagination, a shopping cart, Firebase authentication, and order management. Users can browse, add to cart, and securely place orders.",
     stack: ["React", "Redux Toolkit", "Firebase", "Tailwind CSS"],
   },
-  {
-    id: nanoid(),
-    img: "https://images.pexels.com/photos/12883026/pexels-photo-12883026.jpeg?auto=compress&cs=tinysrgb&w=800",
-    url: "https://mixmaster-mike.netlify.app/",
-    github: "https://github.com/MishaShevchenko/Mixmaster",
-    title: "MixMaster",
-    text: "Search for cocktails and view detailed drink information via the Cocktail DB API. Built with React Router for seamless navigation and React Query for efficient data caching and background refetching.",
-    stack: ["React", "React Router", "React Query", "REST API"],
-  },
 ];
 
 export const currentRole = {
   id: nanoid(),
   role: "Full-Stack Developer",
   company: "Drukwerkdeal",
-  location: "Veghel, Netherlands",
+  location: "Deventer, Netherlands",
   period: "June 2025 – Present",
   techs: ["React", "Gatsby", "TypeScript", "Node.js", "Contentful", "Algolia", "Statsig", "Playwright", "AWS", "GitLab CI", "Netlify", "Sentry"],
   bullets: [
