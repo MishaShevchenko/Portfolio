@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { FaGithubSquare, FaLinkedin, FaEnvelope, FaCopy, FaCheck } from "react-icons/fa";
+import {
+  FaGithubSquare,
+  FaLinkedin,
+  FaEnvelope,
+  FaCopy,
+  FaCheck,
+} from "react-icons/fa";
+import ParticlesBackground from "./ParticlesBackground";
 import SectionTitle from "./SectionTitle";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -12,7 +19,6 @@ const Contact = () => {
     try {
       await navigator.clipboard.writeText(EMAIL);
     } catch {
-      // fallback for browsers that block clipboard API
       const el = document.createElement("textarea");
       el.value = EMAIL;
       document.body.appendChild(el);
@@ -27,10 +33,12 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="bg-white dark:bg-gray-900 py-20 transition-colors duration-300"
+      className="relative bg-white/80 dark:bg-gray-900/80 py-20 transition-colors duration-300 backdrop-blur-sm"
     >
-      <div className="align-element">
+      <ParticlesBackground />
+      <div className="relative align-element z-10">
         <SectionTitle text="get in touch" />
+
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +52,6 @@ const Contact = () => {
         </motion.p>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
-          {/* Email card — copy to clipboard */}
           <motion.button
             onClick={copyEmail}
             initial={{ opacity: 0, y: 20 }}
@@ -52,8 +59,8 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
             className="flex flex-col items-center gap-3 p-6 rounded-xl border border-gray-200 dark:border-gray-700
-              bg-gray-50 dark:bg-gray-800 hover:border-emerald-400 dark:hover:border-emerald-500
-              hover:shadow-md transition-all duration-300 group cursor-pointer w-full"
+              bg-white/70 dark:bg-gray-800/70 hover:border-emerald-400 dark:hover:border-emerald-500
+              hover:shadow-md transition-all duration-300 group cursor-pointer w-full backdrop-blur-sm"
           >
             <AnimatePresence mode="wait">
               {copied ? (
@@ -78,7 +85,9 @@ const Contact = () => {
                 </motion.span>
               )}
             </AnimatePresence>
-            <span className="font-semibold text-gray-800 dark:text-gray-100">Email</span>
+            <span className="font-semibold text-gray-800 dark:text-gray-100">
+              Email
+            </span>
             <span className="text-sm text-center text-gray-500 dark:text-gray-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
               {copied ? "Copied to clipboard!" : EMAIL}
             </span>
@@ -88,7 +97,6 @@ const Contact = () => {
             </span>
           </motion.button>
 
-          {/* GitHub */}
           <motion.a
             href="https://github.com/MishaShevchenko"
             target="_blank"
@@ -98,17 +106,18 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.1 }}
             className="flex flex-col items-center gap-3 p-6 rounded-xl border border-gray-200 dark:border-gray-700
-              bg-gray-50 dark:bg-gray-800 hover:border-emerald-400 dark:hover:border-emerald-500
-              hover:shadow-md transition-all duration-300 group"
+              bg-white/70 dark:bg-gray-800/70 hover:border-emerald-400 dark:hover:border-emerald-500
+              hover:shadow-md transition-all duration-300 group backdrop-blur-sm"
           >
             <FaGithubSquare className="text-3xl text-emerald-500" />
-            <span className="font-semibold text-gray-800 dark:text-gray-100">GitHub</span>
+            <span className="font-semibold text-gray-800 dark:text-gray-100">
+              GitHub
+            </span>
             <span className="text-sm text-center break-all text-gray-500 dark:text-gray-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
               github.com/MishaShevchenko
             </span>
           </motion.a>
 
-          {/* LinkedIn */}
           <motion.a
             href="https://www.linkedin.com/in/misha-shevchenko/"
             target="_blank"
@@ -118,18 +127,19 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.2 }}
             className="flex flex-col items-center gap-3 p-6 rounded-xl border border-gray-200 dark:border-gray-700
-              bg-gray-50 dark:bg-gray-800 hover:border-emerald-400 dark:hover:border-emerald-500
-              hover:shadow-md transition-all duration-300 group"
+              bg-white/70 dark:bg-gray-800/70 hover:border-emerald-400 dark:hover:border-emerald-500
+              hover:shadow-md transition-all duration-300 group backdrop-blur-sm"
           >
             <FaLinkedin className="text-3xl text-emerald-500" />
-            <span className="font-semibold text-gray-800 dark:text-gray-100">LinkedIn</span>
+            <span className="font-semibold text-gray-800 dark:text-gray-100">
+              LinkedIn
+            </span>
             <span className="text-sm text-center text-gray-500 dark:text-gray-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
               linkedin.com/in/misha-shevchenko
             </span>
           </motion.a>
         </div>
 
-        {/* Say Hello CTA — opens mail client */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

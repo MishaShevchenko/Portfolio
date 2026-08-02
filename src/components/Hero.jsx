@@ -1,7 +1,7 @@
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
-import graduationImg from "../assets/Graduation_picture2.jpg";
+import Cube3D from "./Cube3D";
 
 const Hero = () => {
   return (
@@ -22,7 +22,11 @@ const Hero = () => {
           <p className="mt-4 text-2xl text-slate-700 dark:text-slate-300 capitalize tracking-wide">
             <span className="hidden sm:inline">
               <Typewriter
-                words={["Full-Stack Developer 💻", "React & Node.js Engineer ⚛️", "TypeScript Enthusiast 🔷"]}
+                words={[
+                  "Full-Stack Developer 💻",
+                  "React & Node.js Engineer ⚛️",
+                  "TypeScript Enthusiast 🔷",
+                ]}
                 loop={Infinity}
                 cursor
                 cursorStyle="|"
@@ -37,10 +41,20 @@ const Hero = () => {
             3+ years building scalable web apps · Based in Veghel, Netherlands
           </p>
           <div className="flex gap-x-4 mt-4">
-            <a href="https://github.com/MishaShevchenko" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/MishaShevchenko"
+              aria-label="GitHub Profile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGithubSquare className="h-8 w-8 text-slate-500 dark:text-white hover:text-black dark:hover:text-gray-300 duration-300" />
             </a>
-            <a href="https://www.linkedin.com/in/misha-shevchenko/" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/in/misha-shevchenko/"
+              aria-label="LinkedIn Profile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedin className="h-8 w-8 text-slate-500 dark:text-white hover:text-black dark:hover:text-gray-300 duration-300" />
             </a>
           </div>
@@ -61,22 +75,7 @@ const Hero = () => {
             </a>
           </div>
         </motion.article>
-
-        <motion.article
-          className="flex justify-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-        >
-          <motion.img
-            src={graduationImg}
-            alt="Mykhailo Shevchenko"
-            className="w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[450px] mx-auto object-cover border-2 border-gray-500 rounded-lg"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-          />
-        </motion.article>
+        <Cube3D />
       </div>
     </motion.div>
   );
