@@ -1,6 +1,14 @@
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
-const ProjectCard = ({ img, url, github, title, text, stack = [], theme }) => {
+export const ProjectCard = ({
+  img,
+  url,
+  github,
+  title,
+  text,
+  stack = [],
+  theme,
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}

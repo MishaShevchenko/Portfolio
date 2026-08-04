@@ -1,17 +1,31 @@
 import ProjectsCard from "./ProjectsCard";
 import { projects } from "../data";
+import Section from "./Section";
 import SectionTitle from "./SectionTitle";
+import { motion } from "framer-motion";
 
-const Projects = ({theme}) => {
+const Projects = ({ theme }) => {
   return (
-    <section className="py-20 align-element" id="projects">
+    <Section id="projects" particles={false}>
       <SectionTitle text="web creations" />
-      <div className="py-16 grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-        {projects.map((project) => {
-          return <ProjectsCard theme={theme} key={project.id} {...project} />;
-        })}
+
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mt-4 text-center text-lg text-slate-600 dark:text-slate-300 max-w-xl mx-auto mb-10"
+      >
+        Some of my recent work. Real projects, deployed to
+        production.
+      </motion.p>
+
+      <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {projects.map((project) => (
+          <ProjectsCard theme={theme} key={project.id} {...project} />
+        ))}
       </div>
-    </section>
+    </Section>
   );
 };
+
 export default Projects;

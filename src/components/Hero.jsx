@@ -6,13 +6,13 @@ import Cube3D from "./Cube3D";
 const Hero = () => {
   return (
     <motion.div
-      className="bg-emerald-100 dark:bg-gray-900 py-24 relative"
+      className="bg-emerald-100 dark:bg-gray-900 py-24 min-h-[92vh] flex items-center relative"
       id="home"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="align-element grid md:grid-cols-2 items-center gap-8">
+      <div className="align-element grid md:grid-cols-2 items-center gap-8 w-full">
         <motion.article
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
