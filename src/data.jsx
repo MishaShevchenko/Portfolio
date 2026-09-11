@@ -317,9 +317,9 @@ export const projects = [
 export const currentRole = {
   id: nanoid(),
   role: "Full-Stack Developer",
-  company: "Drukwerkdeal",
-  location: "Veghel, Netherlands",
-  period: "June 2025 – Present",
+  company: "Drukwerkdeal (Cimpress)",
+  location: "Deventer, Netherlands",
+  period: "June 2025 – September 2025",
   techs: [
     "React",
     "Gatsby",
@@ -335,13 +335,13 @@ export const currentRole = {
     "Sentry",
   ],
   bullets: [
-    "Building and maintaining e-commerce frontends with React, Gatsby, and TypeScript at scale.",
-    "Headless CMS integration with Contentful and search powered by Algolia for fast product discovery.",
-    "A/B experimentation and feature flagging using Statsig to test and optimise user flows.",
+    "Core contributor to the multi-step complaints form in React/TypeScript — 50% drop in dissatisfied-customer support contacts.",
+    "Rebuilt the My Account dashboard with lazy loading: split a 421 KB bundle into 19 on-demand chunks, cut initial load to 105 KB, removed 300+ KB of unused code (75% faster first load).",
+    "Designed the Playwright E2E suite and authored the Playwright Testing Guide now used as the team standard.",
+    "Replaced a full Contentful-to-Algolia sync with a partial webhook sync across Drukwerkdeal, Printdeal and Impresto.",
     "Working with CimCommerce (Cockpit) e-commerce backend and AWS infrastructure.",
-    "E2E and API test coverage with Playwright; zero-downtime deployments via GitLab CI and Netlify.",
+    "A/B experimentation and feature flagging using Statsig; serverless flows on AWS Lambda and CloudWatch.",
     "Production monitoring through Sentry and New Relic; web vitals tracking via SpeedCurve.",
-    "Cross-functional Agile squad: daily standups (POSM), sprint planning, stakeholder demos, retrospectives.",
   ],
 };
 
@@ -374,6 +374,16 @@ export const experience = [
     bullets: [
       "Built React components, optimized SQL queries, contributed to cloud deployment.",
       "Collaborated with designers and senior engineers on real client projects.",
+    ],
+  },
+  {
+    id: nanoid(),
+    role: "Business Owner / Director",
+    company: "Wholesale & Logistics",
+    period: "2020 – 2022",
+    bullets: [
+      "Founded and directed a regional B2B wholesale and logistics business supplying retail networks.",
+      "Owned warehouse operations, supply chain, B2B sales and P&L end to end.",
     ],
   },
 ];

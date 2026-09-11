@@ -15,17 +15,19 @@ const About = () => (
       >
         <SectionTitle text="about me" />
         <p className="text-lg md:text-xl">
-          Full-stack developer with 3+ years of experience. Currently at{" "}
-          <span className="font-semibold text-emerald-600 dark:text-emerald-400">
-            Drukwerkdeal
-          </span>{" "}
+          Full-stack developer with 3+ years of experience, most recently at
+          Drukwerkdeal, part of Cimpress and the largest digital print platform
           in the Netherlands, building e-commerce frontends with React, Gatsby,
           TypeScript, Node.js, and Contentful.
         </p>
         <p className="text-lg md:text-xl">
-          I care about clean code, meaningful tests, and shipping things that
-          work. Comfortable in Agile teams, code reviews, and cross-functional
-          squads.
+          Before engineering I founded and ran my own B2B business. That still
+          shapes how I work: I care what a change does for the product, not only
+          whether the PR is green.
+        </p>
+        <p className="text-lg md:text-xl">
+          Comfortable in Agile squads, code reviews, and owning a feature from
+          UI through tests to production.
         </p>
       </motion.article>
 

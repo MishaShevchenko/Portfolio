@@ -60,7 +60,7 @@ const Hero = () => {
           </div>
           <div className="flex gap-4 mt-10">
             <a
-              href="/resume.pdf"
+              href="/resume-sep-2026.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gray-800 text-white px-5 py-2 rounded-md hover:bg-gray-700 transition-colors dark:bg-gray-200 dark:text-gray-900 dark:hover:bg-gray-300"
